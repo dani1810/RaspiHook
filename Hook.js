@@ -31,6 +31,8 @@ app.post('/payload', function (req, res) {
 
 	// now pull down the latest
 	exec('git -C ~/RaspiHook pull -f', execCallback);
+	
+	//ToDo install
 
 	// and npm install with --production
 	//exec('npm -C ~/test install --production', execCallback);
@@ -39,10 +41,7 @@ app.post('/payload', function (req, res) {
 	//exec('tsc', execCallback);
 });
 
-//res.sendStatus(200);
-//res.end();
-
-app.listen(4567, function () {
+app.listen(4567, function () { // Port
 	console.log('listening on port 4567')
 });
 
